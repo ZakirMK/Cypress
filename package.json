@@ -1,0 +1,10 @@
+{
+  "devDependencies": {
+    "cypress": "^13.13.2"
+  },
+  "scripts": {
+    "open:e2e": "npx cypress open",
+    "open:component": "npx cypress run --component",
+    "open:api": ""
+  }
+}

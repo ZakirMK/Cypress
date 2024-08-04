@@ -1,14 +1,21 @@
+import { credentials } from '../../code/utils/credentials'
+import { sauceUsers } from '../../code/utils/users'
+import { selectors } from '../utils/selectors'
+
 export class SauceDemo {
-    private selectors ={
-        body: 'body',
-    }
+  public visitSauceDemo = () => {
+    cy.visit(credentials.sauceDemoUrl)
+  }
 
-    public visitSauceDemo = () => {
-        cy.get(this.selectors.body).should('be.visible')
-        cy.visit('https://www.saucedemo.com/')
-    }
+  public login = () => {
+    cy.get(selectors.username).type(sauceUsers.standard_user.username)
+    cy.get(selectors.password).type(sauceUsers.standard_user.password)
+    cy.get(selectors.loginButton).click()
+  }
 
-    public visitHomePage = () => {
-        cy.visit('/')
-    }
+  public assertHomePage = () => {
+    cy.get(selectors.title)
+      .contains(credentials.sauceDemoTitle)
+      .should('be.visible')
+  }
 }

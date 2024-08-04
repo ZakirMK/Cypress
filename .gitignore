@@ -1,0 +1,39 @@
+# Ignore Node.js dependencies
+node_modules/
+
+# Ignore build output
+dist/
+build/
+
+# Ignore logs
+*.log
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore environment files
+.env
+
+# Ignore IDE-specific files
+.vscode/
+.idea/
+
+# Ignore Python-specific files
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore Mac-specific files
+*.DS_Store
+
+# Ignore coverage reports
+coverage/
+
+# Ignore compiled files
+*.class
+*.jar
+
+# Ignore backup files
+*~ 
+"node_modules/public-encrypt/test/test_rsa_privkey.pem" 

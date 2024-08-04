@@ -10,7 +10,19 @@ describe('Sauce Demo', () => {
     sauce.login()
   })
 
-  it('Home page check', () => {
+  it('Check home page', () => {
     sauce.assertHomePage()
+  })
+
+  it('Check home page products', () => {
+    sauce.checkHomeProductsAndPrices()
+  })
+
+  it('Check add to cart process', () => {
+    sauce.checkAddToCartProcess(1) // select a number between 1 and 6 due to the number of items in the inventory
+  })
+
+  it('Check ordering item process', () => {
+    sauce.checkOrderingItemProcess(2) // select a number between 1 and 6 due to the number of items in the inventory
   })
 })

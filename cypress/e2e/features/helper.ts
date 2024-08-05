@@ -10,4 +10,14 @@ export class HelperFeature {
   public assertSauceEventIsMocked = (alias: string) => {
     helper.assertSauceEventIsMocked(alias)
   }
+
+  public gqlRequestCall = (
+    url: string,
+    username: string,
+    password: string,
+    query: string,
+    variables: object = {},
+  ) => {
+    return helper.gqlRequestCall(url, username, password, query, variables)
+  }
 }

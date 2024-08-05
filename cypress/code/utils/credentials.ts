@@ -1,6 +1,5 @@
 export const credentials = {
-  sauceDemoUrl: 'https://www.saucedemo.com/',
-  sauceDemoInventoryUrl: 'https://www.saucedemo.com/inventory.html',
+  sauceDemoUrl: 'https://www.saucedemo.com',
   sauceDemoSubmitUniverseUrl:
     'https://events.backtrace.io/api/unique-events/submit?universe=UNIVERSE&token=TOKEN',
   sauceDemoSummedEventsUrl:
@@ -30,4 +29,5 @@ export const credentials = {
   sauceShippingInfo: 'Free Pony Express Delivery!',
   sauseTotalPrice: 'Total: $10.79',
   sauceCheckoutCompleteTitle: 'Thank you for your order!',
+  fakerBaseUrl: 'https://fakerapi.it/api/v1',
 }

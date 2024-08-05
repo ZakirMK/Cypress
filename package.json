@@ -10,8 +10,8 @@
     "typescript": "^5.5.4"
   },
   "scripts": {
-    "open:e2e": "npx cypress open",
+    "open:e2e": "npx cypress open --config-file ./cypress.config.ts",
     "open:component": "npx cypress run --component",
-    "open:api": ""
+    "open:api": "npx cypress open --config-file ./cypress.configApi.ts"
   }
 }

@@ -14,4 +14,25 @@ export class Helper {
       expect(interception.response.statusCode).to.equal(200)
     })
   }
+
+  public gqlRequestCall = (
+    url: string,
+    username: string,
+    password: string,
+    query: string,
+    variables: object = {},
+  ) => {
+    return cy.request({
+      method: 'POST',
+      url: url,
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Basic ${btoa(`${username}:${password}`)}`,
+      },
+      body: {
+        query,
+        variables,
+      },
+    })
+  }
 }

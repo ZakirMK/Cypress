@@ -30,4 +30,5 @@ export const credentials = {
   sauseTotalPrice: 'Total: $10.79',
   sauceCheckoutCompleteTitle: 'Thank you for your order!',
   fakerBaseUrl: 'https://fakerapi.it/api/v1',
+  pokeBaseUrl: 'https://beta.pokeapi.co/graphql/v1beta',
 }

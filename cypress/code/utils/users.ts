@@ -12,3 +12,14 @@ export const sauceUsers = {
     password: 'secret_saue',
   },
 }
+
+export const pokeUsers = {
+  admin: {
+    username: 'admin',
+    password: 'admin',
+  },
+  user: {
+    username: 'user',
+    password: 'user',
+  },
+}

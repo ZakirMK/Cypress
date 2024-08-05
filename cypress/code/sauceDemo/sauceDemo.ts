@@ -2,7 +2,6 @@ import { credentials } from '../../code/utils/credentials'
 import { sauceUsers } from '../../code/utils/users'
 import { selectors } from '../utils/selectors'
 
-let itemNumber: number = 0
 let elementNumber: number = 0
 
 export class SauceDemo {

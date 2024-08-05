@@ -1,10 +1,11 @@
 import { SauceDemoFeature } from '../features/sauceDemo'
 import { HelperFeature } from '../features/helper'
+import { credentials } from '../../code/utils/credentials'
 
 const sauce: SauceDemoFeature = new SauceDemoFeature()
 const helper: HelperFeature = new HelperFeature()
 
-describe('Sauce Demo', () => {
+describe('Sauce Demo - Main tests', () => {
   beforeEach(() => {
     sauce.visitSauceDemoPage()
     sauce.login()
@@ -24,5 +25,24 @@ describe('Sauce Demo', () => {
 
   it('Check ordering item process', () => {
     sauce.checkOrderingItemProcess(2) // select a number between 1 and 6 due to the number of items in the inventory
+  })
+})
+
+describe('Sauce Demo - Mock response of SauceDemo events', () => {
+  beforeEach(() => {
+    sauce.visitSauceDemoPage()
+  })
+
+  it('Mock SauceDemo token', () => {
+    helper.mockSauceDemoEvent(
+      credentials.sauceDemoSubmitUniverseUrl,
+      'uniqueTokenEventAlias',
+    )
+    helper.mockSauceDemoEvent(
+      credentials.sauceDemoSummedEventsUrl,
+      'summedTokenEventAlias',
+    )
+    helper.assertSauceEventIsMocked('uniqueTokenEventAlias')
+    helper.assertSauceEventIsMocked('summedTokenEventAlias')
   })
 })

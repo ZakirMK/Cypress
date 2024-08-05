@@ -1,5 +1,10 @@
 export const credentials = {
   sauceDemoUrl: 'https://www.saucedemo.com/',
+  sauceDemoInventoryUrl: 'https://www.saucedemo.com/inventory.html',
+  sauceDemoSubmitUniverseUrl:
+    'https://events.backtrace.io/api/unique-events/submit?universe=UNIVERSE&token=TOKEN',
+  sauceDemoSummedEventsUrl:
+    'https://events.backtrace.io/api/summed-events/submit?universe=UNIVERSE&token=TOKEN',
   sauceDemoTitle: 'Products',
   sauceCheckoutTitle: 'Checkout: Overview',
   sauceInventoryItems: [

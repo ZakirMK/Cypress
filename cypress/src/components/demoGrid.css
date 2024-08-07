@@ -1,0 +1,91 @@
+.grid-container {
+  max-width: 1000px;
+  margin: 20px auto;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.search-input {
+  width: calc(100% - 40px);
+  padding: 12px 20px;
+  margin: 20px;
+  border: 1px solid #4a90e2;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #4a90e2;
+}
+
+.grid-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.grid-table th,
+.grid-table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #4a90e2;
+  font-size: 15px;
+  color: #333;
+}
+
+.grid-table th {
+  background-color: #f1f8ac;
+  font-weight: bold;
+  position: relative;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.grid-table th:hover {
+  background-color: #4a90e2;
+  color: #4a90e2;
+}
+
+.grid-table th:after {
+  content: attr(data-sort-arrow); /* Arrow content from attribute */
+  font-size: 12px; /* Smaller font size for arrow */
+  margin-left: 10px; /* Space between text and arrow */
+  color: #666; /* Grey color for arrow */
+}
+
+.grid-table tbody tr:hover {
+  background-color: #fafafa; /* Light background on row hover */
+  transition: background-color 0.3s ease; /* Smooth transition for hover */
+}
+
+.grid-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9; /* Alternating row color */
+}
+
+.grid-table tbody td {
+  vertical-align: middle; /* Center vertically */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .grid-container {
+    margin: 10px; /* Reduced margin for smaller screens */
+  }
+
+  .search-input {
+    width: calc(100% - 20px); /* Full width minus smaller padding */
+    margin: 10px; /* Smaller margin */
+  }
+
+  .grid-table th,
+  .grid-table td {
+    padding: 10px; /* Reduced padding for smaller screens */
+    font-size: 14px; /* Smaller font size */
+  }
+}

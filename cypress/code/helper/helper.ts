@@ -22,17 +22,19 @@ export class Helper {
     query: string,
     variables: object = {},
   ) => {
-    return cy.request({
-      method: 'POST',
-      url: url,
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: `Basic ${btoa(`${username}:${password}`)}`,
-      },
-      body: {
-        query,
-        variables,
-      },
-    })
+    return cy
+      .request({
+        method: 'POST',
+        url: url,
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer abcdefghijklmnopqrstuvwxyz1234567890`,
+        },
+        body: {
+          query,
+          variables,
+        },
+      })
+      .as('gqlQuery')
   }
 }

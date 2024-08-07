@@ -1,5 +1,3 @@
-import { remove, zip } from 'cypress/types/lodash'
-
 export const selectors = {
   body: 'body',
   username: '[data-test="username"]',
@@ -21,4 +19,14 @@ export const selectors = {
   summaryInfo: '[class="summary_info"]',
   finishButton: '[data-test="finish"]',
   completeHeader: '[data-test="complete-header"]',
+  loginContainer: '[class="login-container"]',
+  errorMessage: '[class="error-message"]',
+  gridContainer: '[class="grid-container"]',
+  gridTable: '[class="grid-table"]',
+  gridTableHeader: '[data-test="grid-table-header"]',
+  gridTableRow: '[data-test="grid-table-row"]',
+  idColumn: '[data-test="idColumn"]',
+  nameColumn: '[data-test="nameColumn"]',
+  rowItem: '[data-test="rowItem"]',
+  searchInput: '[class="search-input"]',
 }

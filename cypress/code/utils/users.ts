@@ -23,3 +23,14 @@ export const pokeUsers = {
     password: 'user',
   },
 }
+
+export const loginComponentUsers = {
+  admin: {
+    username: 'admin',
+    password: 'password',
+  },
+  user: {
+    username: 'user',
+    password: 'password',
+  },
+}

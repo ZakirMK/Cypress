@@ -12,4 +12,11 @@ export default defineConfig({
     chromeWebSecurity: false,
     setupNodeEvents(on, config) {},
   },
+  component: {
+    specPattern: 'cypress/component/**/*.cy.tsx',
+    devServer: {
+      framework: 'react',
+      bundler: 'vite',
+    },
+  },
 })

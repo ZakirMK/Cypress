@@ -18,8 +18,6 @@ export class HelperFeature {
     query: string,
     variables: object = {},
   ) => {
-    return helper
-      .gqlRequestCall(url, username, password, query, variables)
-      .as('gqlQuery')
+    return helper.gqlRequestCall(url, username, password, query, variables)
   }
 }

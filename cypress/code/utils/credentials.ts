@@ -31,4 +31,9 @@ export const credentials = {
   sauceCheckoutCompleteTitle: 'Thank you for your order!',
   fakerBaseUrl: 'https://fakerapi.it/api/v1',
   pokeBaseUrl: 'https://beta.pokeapi.co/graphql/v1beta',
+  token: 'abcdefgh',
+  apolloUrl: '/dummyPath',
+  gridPath: '/dummyPath',
+  grid1: '/dummyPath',
+  grid2: '/dummyPath',
 }

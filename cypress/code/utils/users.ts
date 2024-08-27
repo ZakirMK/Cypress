@@ -9,7 +9,7 @@ export const sauceUsers = {
   },
   visual_user: {
     username: 'visual_user',
-    password: 'secret_saue',
+    password: 'secret_sauce',
   },
 }
 

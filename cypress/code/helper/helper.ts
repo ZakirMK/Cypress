@@ -1,3 +1,8 @@
+import { CyHttpMessages } from 'cypress/types/net-stubbing'
+import { credentials } from '../../code/utils/credentials'
+
+export let componentTokenString: string = credentials.token
+
 export class Helper {
   public mockSauceDemoEvent = (url: string, alias: string) => {
     cy.intercept('POST', url, {
@@ -36,5 +41,44 @@ export class Helper {
         },
       })
       .as('gqlQuery')
+  }
+
+  public getAuthTokenComponent(url: string, email: string, password: string) {
+    cy.request({
+      method: 'POST',
+      url: url,
+      body: {
+        email: email,
+        password: password,
+      },
+    }).then((response) => {
+      const componentToken = response.body.token
+      cy.wrap(componentToken).as('authTokenComponent')
+    })
+  }
+
+  public mockComponentApi(
+    url: string,
+    email: string,
+    password: string,
+    mockedOperationName: string,
+    apiMockCall: any,
+  ) {
+    this.getAuthTokenComponent(url, email, password)
+    cy.get('@authTokenComponent').then(
+      (componentToken: JQuery<HTMLElement>) => {
+        componentTokenString = componentToken.toString()
+        cy.intercept(
+          'POST',
+          url,
+          (req: CyHttpMessages.IncomingHttpRequest<any, any>) => {
+            const operationName: any = req.body.operationName
+            if (operationName == mockedOperationName) {
+              req.reply({ body: apiMockCall })
+            }
+          },
+        ).as('mockComponentApiRequest')
+      },
+    )
   }
 }

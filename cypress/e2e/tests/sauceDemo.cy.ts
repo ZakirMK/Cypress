@@ -44,5 +44,9 @@ describe('Sauce Demo - Mock response of SauceDemo events', () => {
     )
     helper.assertSauceEventIsMocked('uniqueTokenEventAlias')
     helper.assertSauceEventIsMocked('summedTokenEventAlias')
+    assert(
+      false,
+      'Forced failure to verify screenshot and video capture for failed test cases',
+    )
   })
 })

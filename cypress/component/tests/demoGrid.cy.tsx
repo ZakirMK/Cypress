@@ -1,4 +1,3 @@
-import React from 'react'
 import Grid from '../../src/components/demoGrid'
 import { DemoGridFeature } from '../features/demoGrid'
 

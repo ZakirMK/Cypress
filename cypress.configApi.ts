@@ -10,6 +10,7 @@ export default defineConfig({
   e2e: {
     specPattern: 'cypress/api/**/*.cy.ts',
     chromeWebSecurity: false,
+    supportFile: false,
     setupNodeEvents(on, config) {},
   },
 })
